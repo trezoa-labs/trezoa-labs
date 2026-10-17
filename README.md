@@ -231,8 +231,10 @@ The competitive-purchase rows follow the single-charge rule: the highest applica
 
 Monetizing the paths that currently carry little or no charge needs specific steps rather than a change of model:
 
-- **Compute and agent-wallet volume** carries the full model once a US-dollar-designated token is approved and enabled for settlement on the Trezoa L1. Approved-token settlement is implemented but is refused in production until verified token-program artifacts exist and the owners approve the asset. Pricing TRZ itself would take a new, signed pricing version with an explicit valuation; the software assumes none.
-- **Goods and services settled in TRZ** need at least three contracted, production-grade TRZ price sources before the TRZ procurement rail can be activated, along with registration of Trezoa's network identifier and the production program identifiers.
+- **Competitive compute purchases** can carry the single-charge rule in full, under a Shared Savings agreement, once a US-dollar-designated token is approved and enabled for compute settlement on the Trezoa L1. Approved-token settlement is implemented but is refused in production until verified token-program artifacts exist and the owners approve the asset.
+- **Direct hosted-wallet payments** (including x402 resources, paid MCP tools and A2A skills) remain Service-Fee-only. As built they settle in TRZ, so they carry no charge today. A different settlement asset would not make them eligible for Shared Savings or AI cost recovery: they have one seller, one price and no competing quotes.
+- **TRZ itself stays exempt.** In the documented source revision, the production checks require every Service Fee pricing version to list TRZ as exempt, and reject any Shared Savings agreement that assigns TRZ a valuation. An operator cannot change this by registering a pricing version or an agreement; pricing TRZ would need separately authorized policy and implementation changes.
+- **Goods and services settled in TRZ**, which are measured at each purchase's own pinned TRZ valuation rather than through the agreement, need at least three contracted, production-grade TRZ price sources before the TRZ procurement rail can be activated, along with registration of Trezoa's network identifier and the production program identifiers.
 - **US dollar and EVM settlement** need the live provider validation described in [section 10](#10-progress-and-evidence).
 
 ### 5.6 Status of pricing
@@ -379,7 +381,7 @@ In the order the work depends on:
 2. **Key ceremonies and custody**: hardware security modules, production program identifiers, governance council members and upgrade authority.
 3. **A multi-host test network** on validator-class hardware, with benchmarks published together with their method.
 4. **Provider validation**: sandbox and then live validation of the ACH, tax, supplier-verification and AI providers, starting with US dollar purchasing.
-5. **Settlement assets for compute and agent wallets**: approval and enablement of a US-dollar-designated token on the Trezoa L1, and contracted TRZ price sources for TRZ procurement.
+5. **Settlement assets**: approval and enablement of a US-dollar-designated token on the Trezoa L1 for compute purchases, and contracted TRZ price sources for TRZ procurement.
 6. **Supplier onboarding**: connecting the first real suppliers and compute providers to Trezoa's supplier API, x402 and compute-provider software.
 7. **Legal and compliance**: money-transmission analysis, a KYC/AML and sanctions programme, customer terms, tax treatment of the Trezoa charge, and token classification.
 8. **Design partners**: a small number of organizations running real, recurring purchases under executed agreements, which is when pricing is first activated.
